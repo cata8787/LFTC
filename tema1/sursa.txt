@@ -1,0 +1,1 @@
+#include<iostream> using namespace std ; int main() { double raza , pcerc , acerc ; raza = 5 ; pcerc = raza * 3.14 * 2 ; acerc = raza * raza * 3.14 ; cout<< pcerc ; cout<< acerc ; }
