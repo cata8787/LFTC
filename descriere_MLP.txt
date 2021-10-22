@@ -1,0 +1,97 @@
+aab
+
+1.)
+
+<program>         ::= include<iostream> using namespace std; int main(){ <lista_decl> <lista_instr> };
+
+<lista_decl>      ::= <decl> <lista_decl> | <decl>
+<decl>            ::= <tip_data> <lista_ident>; 
+
+<tip_data>        ::= int, double, <tip_definit>;
+<tip_definit>     ::= struct ID { <tip_data> ID , <tip_data> ID };
+ 
+<lista_ident>     ::= ID, <lista_ident> | ID;
+
+<lista_instr>     ::= <instr> ; <lista_instr> | <instr>;
+ 
+<instr>           ::= <atribuire> | <selectie> | <ciclare> | <citire> | <afisare>;
+<atribuire>       ::= ID = <expr>; 
+<citire>          ::= cin>> <termen>;
+<afisare>         ::= cout<< <termen>;
+<instr_selectie>  ::= if ( <expr> ) { <lista_instr>; };
+<instr_ciclare>   ::= while ( <expr> ) { <lista_instr>; };
+
+ 
+<expr>            ::= <termen> | <expr> <operator> <expr>;
+<termen>          ::= ID | CONST; 
+<operator>        ::= + | - | * | / | % | != | < | <= | > | >= ;
+
+
+2.)
+a.) permietrul si aria cercului
+
+include<iostream>
+using namespace std;
+int main(){
+	double raza, p_cerc, a_cerc;
+	raza = 5;
+	p_cerc = raza * 3.14 * 2;
+	a_cerc = raza * raza * 3.14;
+	cout<<p_cerc;
+	cout<<a_cerc;
+}
+
+b.) cmmdc a doua numere date
+
+include<iostream>
+using namespace std;
+int main(){
+	int nr1, nr2, rest;
+	nr1 = 12;
+	nr2 = 8;
+	while( nr2 != 0 ){
+		rest = nr1 % nr2;
+		nr1 = nr2;
+		nr2 = rest;
+	};
+	cout<<nr1;
+}
+
+
+c.) suma a n numere citite de la tastatura
+
+include<iostream>
+using namespace std;
+int main(){
+	int n,suma,nr;
+	n = 10;
+	suma = 0;
+	while ( n ) {
+		cin>>nr;
+		suma = suma + nr;
+		n = n - 1;
+	};
+	cout<<suma;
+}
+
+3.)
+a.) doua erori existente in limbajul de baza -- syntax error si runtime error(division by 0)
+
+include<iostream>
+using namespace std;
+int main(){
+	int a, b, c;
+	b = 1
+	a = 0;
+	c = b/a;
+}
+
+b.) doua erori existente doar in MLP nu si in limbajul de baza -- cout<<a<<b; nedefinit si declararea plus atribuirea intr-o singura linie nedefinita;
+
+include<iostream>
+using namespace std;
+int main(){
+	int a=10;
+	int b;
+	cout<<a<<b;
+}
