@@ -4,9 +4,8 @@
 #include<string>
 #include<fstream>
 #include<unordered_map>
-#include"TAD.h"
 #include"FIP.h"
-#include"TS.h"
+
 using namespace std;
 
 vector<string> readFile(string filename) {
