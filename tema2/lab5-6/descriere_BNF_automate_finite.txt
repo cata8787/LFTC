@@ -1,0 +1,17 @@
+CONSTANTE
+<fisier> ::= <stari><alfabet><stare_initiala><stari_finale><nr_tranzitii><tranzitii>
+<stari> ::= q0|q1|q2|q3|q4|q5|q6
+<alfabet> ::= .|+|-|0|1|2||3|4|5|6|7|8|9
+<stare_initiala> ::= q0
+<stari_finale> ::= q1|q6
+<nr_tranzitii> ::= <tranzitii>.length
+<tranzitii> ::= q0 0 q1|q0 - q3|q0 + q2|q0 123456789 q4|q2 123456789 q4|q3 123456789 q4|q4 0123456789 q4|q4 . q5|q5 123456789 q6|q6 0123456789 q6
+
+IDENTIFICATORI
+<fisier> ::= <stari><alfabet><stare_initiala><stari_finale><nr_tranzitii><tranzitii>
+<stari> ::= q0|q1
+<alfabet> ::= _|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|0|1|2|3|4|5|6|7|8|9
+<stare_initiala> ::= q0
+<stare_finala> ::= q1
+<nr_tranzitii> ::= <tranzitii>.length
+<tranzitii> ::= q0 _abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ q1|q1 _abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789 q1

@@ -1,0 +1,1 @@
+#include<iostream> using namespace std ; int main ( ) { double raza , zcerc , acerc ; raza = 7 ; zcerc = raza * 11 * 3.14 ; acerc = raza * raza * 5 ; cout<< zcerc ; cout<< acerc ; }
